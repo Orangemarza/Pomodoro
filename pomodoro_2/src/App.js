@@ -1,10 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Settings from './Settings';
+import Timer from './timer';
+import {useState} from "react";
+
 
 function App() {
+  
+  const [showSettings, setShowSettings] = useState(true);
+
   return (
     <main>
-      Pomofocus the way to study
+      {showSettings ? <Settings /> : <Timer />} 
     </main>
   );
 }
